@@ -26,6 +26,10 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Este app precisa da câmera para identificar o usuário na estação de EPI.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Este app precisa do microfone para o funcionamento da câmera na estação de EPI.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
