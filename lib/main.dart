@@ -94,7 +94,9 @@ class _KioskWebViewState extends State<KioskWebView> with WidgetsBindingObserver
       // originados de dentro da própria página web.
       androidController.setMediaPlaybackRequiresUserGesture(false);
       androidController.setOnShowFileSelector((params) async => []);
-      AndroidWebViewController.enableDebugging(false);
+      AndroidWebViewController.enableDebugging(true);
+      // Permite que a página HTTPS chame recursos HTTP locais (ESP32/fechadura).
+      androidController.setMixedContentMode(MixedContentMode.alwaysAllow);
       androidController.setOnPlatformPermissionRequest((request) {
         request.grant();
       });
